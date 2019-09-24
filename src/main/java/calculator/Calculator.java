@@ -20,10 +20,7 @@ public class Calculator {
                 String op2 = args [3];
                 String c = args [4];
                 result = calc(Double.toString(result), op2, args[4]);
-
             }
-
-
 
         return Double.toString(result);
     }
