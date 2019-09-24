@@ -7,8 +7,28 @@ package calculator;
  */
 public class Calculator {
 
-    public String calculate(String[] expression) {
-        return "0";
+    public String calculate(String[] args) {
+        double a = Double.parseDouble( args[0]);
+        String op = args[1];
+        double b = Double.parseDouble(args[2]);
+        double result;
+        switch (op) {
+            case "+": result = a + b;
+                break;
+            case "-": result = a - b;
+                break;
+            case "*": result = a * b;
+                break;
+            case "/": result = a / b;
+                break;
+
+            default:
+                result = 0;
+
+        }
+
+
+        return "" + result;
     }
 
 }
