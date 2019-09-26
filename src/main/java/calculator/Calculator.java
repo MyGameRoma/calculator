@@ -11,15 +11,17 @@ public class Calculator {
         String a = args[0];
         String op = args[1];
         String b = args [2];
-
-
-
-        var result = calc(args[0], args[1], args[2]);
-
+        var result = calc(a, op, b);
             if (args.length == 5) {
-                String op2 = args [3];
-                String c = args [4];
-                result = calc(Double.toString(result), op2, args[4]);
+                String op2 = args[3];
+                String c = args[4];
+                if (op == "*") {
+                    result = calc(Double.toString(result), op2, c);
+                } else {
+                    result = calc(b, op2, c);
+                    result = calc (Double.toString(result), op, a);
+                }
+
             }
 
         return Double.toString(result);
